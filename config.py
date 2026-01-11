@@ -2,7 +2,10 @@ import os
 from pathlib import Path
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("8083480600:AAGQRJmQ7-opV34oXPTaqhjJtfN1zJcaxnk")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+print(f"DEBUG: BOT_TOKEN value: {BOT_TOKEN[:10] if BOT_TOKEN else 'NOT FOUND'}...")
+print(f"DEBUG: All env vars: {list(os.environ.keys())}")
+
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN environment variable is required")
 
